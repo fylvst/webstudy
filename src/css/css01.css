@@ -1,0 +1,36 @@
+ body{
+        margin:0;
+        padding:0;
+        background-image: url("../imgs/background.jpg");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div{
+        position:relative;
+        float:left;
+    }
+    #div-container{
+        width:80%;
+        height:100%;
+        border:1px solid blue;
+        margin-left:10%;
+        float:left;
+        background_color:red;
+    }
+    #tbl_fruit{
+        width:100%;
+        line-height:20px;
+        margin-top:120px;
+        margin-left:20%;
+    }
+    #tbl_fruit,#tbl_fruit th,#tbl_fruit td,#tbl_fruit tr{
+        border:1px solid gray;
+        border-collapse:collapse;
+        text-align:center;
+        font-size:16px;
+        font-family:"华文楷体"
+    }
+    p{
+        background-color: pink;
+    }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue6</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        .basic{
+            height: 100px;
+            width: 80%;
+            border: black solid 2px;
+        }
+        .demo1{
+            background-color: aquamarine;
+        }
+        .demo2{
+            background-color: deeppink;
+        }
+        .demo3{
+            background-color: antiquewhite;
+        }
+        .demo4{
+            font-family: 华文楷体;
+        }
+        .demo5{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <div class="basic" :class="a" @click="changeMood">
+        绑定样式-字符串写法，适用于样式的类名不确定需要动态决定
+    </div>
+    <div class="basic" :class="arr">
+        嗨嗨害，数组写法，
+    </div>
+    <div class="basic" :style="b">
+        内联样式
+    </div>
+    <div class="basic" v-show="true">
+        条件渲染
+    </div>
+    <div class="basic">
+        n:{{n}}<br>
+        <button @click="add_n">add_n</button><br>
+        <p v-show="n===1">Angular</p>
+        <p v-show="n===2">React</p>
+        <p v-show="n===3">Vue</p>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    const vm=new Vue({
+        el: '#root',
+        data:{
+            a:'demo1',
+            arr:['demo3','demo4','demo5'],
+            b: {
+                borderRadius: '20px'},
+            n:0
+        },
+        methods:{
+            changeMood(){
+                const arr=['demo1','demo2','demo3']
+                this.a=arr[Math.floor(Math.random()*3)]
+                console.log(this.a)
+            },
+            add_n(){
+                this.n=this.n+1
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水果菜单</title>
+    <link rel="stylesheet" href="../css/css01.css" type="text/css">
+    <script type="text/javascript" src="../js/demo07.js"></script>
+</head>
+<body>
+<div id="div-container">
+<div id="div-fruit-list">
+    <table id="tbl_fruit">
+        <tr>
+            <th>名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+        <tr onmouseover="showBGColor()" onmouseout="clearBGColor()">
+            <td>苹果</td>
+            <td onmouseover="showhand()">5</td>
+            <td>20</td>
+            <td>100</td>
+            <td>&nbsp;<img src="../imgs/delete.jpg" width="20" height="20"></td>
+        </tr>
+        <tr onmouseover="showBGColor()" onmouseout="clearBGColor()">
+            <td>香蕉</td>
+            <td>2</td>
+            <td>50</td>
+            <td>100</td>
+            <td>&nbsp;<img src="../imgs/delete.jpg" width="20" height="20"></td>
+        </tr>
+        <tr onmouseover="showBGColor()" onmouseout="clearBGColor()">
+            <td>菠萝</td>
+            <td>20</td>
+            <td>5</td>
+            <td>100</td>
+            <td>&nbsp;<img src="../imgs/delete.jpg" width="20" height="20"></td>
+        </tr>
+        <tr>
+            <td>总计</td>
+            <td colspan="4">400</td>
+        </tr>
+    </table>
+
+</div>
+</div>
+
+</body>
+</html>

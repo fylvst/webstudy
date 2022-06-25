@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue2</title>
+    <script  type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        .demo1{
+            background-color: aquamarine;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+<h2>Hello</h2>
+    <button @click="showInfo1">button1</button>
+<button @click="showInfo2(66,$event)">button2</button>
+    <a href="https://baidu.com/" @click.prevent="showInfo1">try</a><br/>
+    阻止事件冒泡
+    <div class="demo1" @click="showInfo1">
+        <button @click.stop="showInfo3">try</button>
+    </div><br>
+    事件只触发一次
+    <button @click.once="showInfo1">try</button><br>
+
+
+
+</div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip=false
+    const vm=new Vue({
+        el:'#root',
+        methods:{
+            showInfo1(){
+                alert('get it 1')
+            },
+            showInfo3(){
+                alert('get it 3')
+            },
+            showInfo2(number,a){
+                console.log(number,a)
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,19 @@
+/*标签样式*/
+p{
+    color: red;
+}
+/*类样式*/
+.f20{
+    font-size: 20px;
+}
+/*ID样式（尽量唯一）*/
+#p4{
+    background: pink;
+    font-size: 24px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: "华文彩云";
+}
+div p{
+    color: brown;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h1>插值语法</h1>
+        <p>Hello,{{name}},{{address}},{{school.name}}</p>
+        <h1>指令语法</h1>
+        <a :href="url">jump</a><br>
+        单向数据绑定:<input type="text" :value="name"><br>
+        双向数据绑定:<input type="text" v-model="name">
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip=false
+        const vm=new Vue({
+            el:'#root',
+            data:{
+                name:'world',
+                address:'fy',
+                url:'https://cn.vuejs.org/v2/guide/',
+                school:{
+                    name:'hnu'
+                }
+            }
+        })
+        let number = 20
+        let person={
+            name:'张三',
+            sex:'男'
+            //age不可枚举
+        }
+        Object.defineProperty(person,'age',{
+            get (){
+                console.log('hello')
+                return number
+            },
+            set (value){
+                console.log('set')
+                number = value
+            }
+        })
+    </script>
+</body>
+</html>
